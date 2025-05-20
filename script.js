@@ -129,7 +129,6 @@ function payWithPix(giftId) {
     const gift = gifts.find(g => g.id === giftId);
     if (!gift) return;
     
-    const pixContent = generatePixCode(gift);
     const modal = document.querySelector('.modal-overlay');
     
     modal.innerHTML = `
@@ -140,11 +139,9 @@ function payWithPix(giftId) {
             
             <div class="pix-payment-info">
                 <h4>Escaneie o QR Code</h4>
-                <div id="qrcode"></div>
+                <img src="img/qrcode-pix.png" alt="QR Code PIX" class="static-qrcode">
                 
                 <div class="pix-key-container">
-    
-                    
                     <p>Ou utilize a chave PIX:</p>
                     <input type="text" id="pixKeyInput" class="pix-key-input" value="${escapeHtml(gift.pixKey)}" readonly>
                     <button class="pix-copy-btn" onclick="copyPixKey()">
@@ -157,7 +154,7 @@ function payWithPix(giftId) {
                 <div class="payment-instructions">
                     <h4>Como pagar:</h4>
                     <ol>
-                    <li>Nome: Yasmin Nogueira Rodrigues,banco: Nubank</li>
+                        <li>Nome: Yasmin Nogueira Rodrigues, banco: Nubank</li>
                         <li>Abra o app do seu banco</li>
                         <li>Selecione a opção PIX</li>
                         <li>Aponte a câmera para o QR Code</li>
@@ -174,6 +171,7 @@ function payWithPix(giftId) {
             </button>
         </div>
     `;
+}
     
     generateQRCode("qrcode", pixContent, {
         width: 200,
@@ -182,7 +180,7 @@ function payWithPix(giftId) {
         colorLight: "#ffffff",
         correctLevel: QRCode.CorrectLevel.H
     });
-}
+
 
 function payWithLink(giftId) {
     const gift = gifts.find(g => g.id === giftId);
