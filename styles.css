@@ -882,3 +882,14 @@ footer {
     font-size: 0.9rem;
 }
 
+.static-qrcode {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #ffb3c6;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+}
+
