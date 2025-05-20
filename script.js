@@ -129,6 +129,7 @@ function payWithPix(giftId) {
     const gift = gifts.find(g => g.id === giftId);
     if (!gift) return;
     
+    const pixContent = generatePixCode(gift);
     const modal = document.querySelector('.modal-overlay');
     
     modal.innerHTML = `
@@ -139,7 +140,8 @@ function payWithPix(giftId) {
             
             <div class="pix-payment-info">
                 <h4>Escaneie o QR Code</h4>
-                <img src="img/qrcode-pix.png" alt="QR Code PIX" class="static-qrcode">
+                <!-- Substitua o div pelo QR code como imagem -->
+                 <img src="img/qrcode-pix.png" alt="QR Code PIX">
                 
                 <div class="pix-key-container">
                     <p>Ou utilize a chave PIX:</p>
@@ -154,14 +156,14 @@ function payWithPix(giftId) {
                 <div class="payment-instructions">
                     <h4>Como pagar:</h4>
                     <ol>
-                        <li>Nome: Yasmin Nogueira Rodrigues, banco: Nubank</li>
+                        <li>Nome: Yasmin Nogueira Rodrigues,banco: Nubank</li>
                         <li>Abra o app do seu banco</li>
                         <li>Selecione a opção PIX</li>
                         <li>Aponte a câmera para o QR Code</li>
                         <li>Confirme o valor e finalize</li>
                     </ol>
                     <p class="gift-reference">Referência: ${escapeHtml(gift.name)}</p>
-                    <p>Nome Beneficiário: Yasmin Nogueira Rodrigues</p>
+                    <p>Nome: Yasmin Nogueira Rodrigues</p>
                     <p>Banco: Nubank</p>
                 </div>
             </div>
@@ -171,16 +173,10 @@ function payWithPix(giftId) {
             </button>
         </div>
     `;
-}
     
-    generateQRCode("qrcode", pixContent, {
-        width: 200,
-        height: 200,
-        colorDark: "#000000",
-        colorLight: "#ffffff",
-        correctLevel: QRCode.CorrectLevel.H
-    });
-
+    // Remova a chamada para generateQRCode pois agora estamos usando uma imagem
+}    
+ 
 
 function payWithLink(giftId) {
     const gift = gifts.find(g => g.id === giftId);
