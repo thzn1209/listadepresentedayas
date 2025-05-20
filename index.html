@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Presentes - Thiago & Yasmin</title>
+    <link rel="stylesheet" href="styles.css">
+ <!-- Adicione o link para ícones Font Awesome se ainda não estiver incluído -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            
+            <div class="couple-photo">
+                <img src="img/ftfundo.png" alt="Thaigo e Yasmin">
+            </div>
+            <h1>Thiago & Yasmin</h1>
+            <h2>Lista de Presentes para o Chá de Panela</h2>
+        </header>
+
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Pesquisar presentes...">
+                <button onclick="searchGifts()">Buscar</button>
+            </div>
+            <div class="sort-options">
+                <label for="sortSelect">Ordenar por:</label>
+                <select id="sortSelect" onchange="sortGifts()">
+                    <option value="name">Ordem Alfabética</option>
+                    <option value="price-asc">Menor Preço</option>
+                    <option value="price-desc">Maior Preço</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="gifts-list" id="giftsList">
+            <!-- Lista de presentes diretamente no HTML -->
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="img/grill.jpg" alt="Sanduicheira">
+                </div>
+                <div class="gift-info">
+                    <h3>Sanduicheira</h3>
+                    <div class="gift-price">R$ 79.90</div>
+                    <p class="gift-description">Grill Britânia Abertura 180º 520W BGR06A Dura Mais 127V.</p>
+                    <a href="#" class="buy-btn" onclick="selectGift(1)">Presentear</a>
+                </div>
+            </div>
+            
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="img/liquidificador.png" alt="Liquidificador">
+                </div>
+                <div class="gift-info">
+                    <h3>Liquidificador</h3>
+                    <div class="gift-price">R$ 97.45</div>
+                    <p class="gift-description">Liquidificador potente com 6 velocidades e jarra de vidro.</p>
+                    <a href="#" class="buy-btn" onclick="selectGift(2)">Presentear</a>
+                </div>
+            </div>
+            
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="img/batedeira.jpg" alt="Air Fryer">
+                </div>
+                <div class="gift-info">
+                    <h3>Batedeira Mondial</h3>
+                    <div class="gift-price">R$ 111.99</div>
+                    <p class="gift-description">Batedeira Prática, Mondial, Preto, 400W, 110V - B-44-B</p>
+                    <a href="#" class="buy-btn" onclick="selectGift(3)">Presentear</a>
+                </div>
+            </div>
+            
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="img/Cafeteira.jpg" alt="Jogo de Talheres">
+                </div>
+                <div class="gift-info">
+                    <h3>Cafeteria Elétrica</h3>
+                    <div class="gift-price">R$ 107,99</div>
+                    <p class="gift-description">Cafeteira Elétrica Dolce Arome, Mondial, Preto/Inox, 550W, 110V - C-43-20X-SI</p>
+                    <a href="#" class="buy-btn" onclick="selectGift(4)">Presentear</a>
+                </div>
+            </div>
+            
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="img/garrafa-cafe.jpg" alt="Conjunto de Facas">
+                </div>
+                <div class="gift-info">
+                    <h3>Garrafa Elétrica Agratto</h3>
+                    <div class="gift-price">R$ 64,24</div>
+                    <p class="gift-description">Agratto 784 - Chaleira Eletrica Inox, 220v, 1,8 Litro, Preto/inox</p>
+                    <a href="#" class="buy-btn" onclick="selectGift(5)">Presentear</a>
+                </div>
+            </div>
+            
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="img/ferro-de-passar.jpg" alt="Jogo de Copos">
+                </div>
+                <div class="gift-info">
+                    <h3>Ferro de Engomar</h3>
+                    <div class="gift-price">R$ 117.99</div>
+                    <p class="gift-description">BLACK+DECKER Ferro de Passar Roupa a Seco, Metálico Preto, Modelo VFA1110XM6, 220V</p>
+                    <a href="#" class="buy-btn" onclick="selectGift(6)">Presentear</a>
+                </div>
+            </div>
+            
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="img/jogo-xicara.jpg" alt="Processador de Alimentos">
+                </div>
+                <div class="gift-info">
+                    <h3>Jogo de 4 Xícaras</h3>
+                    <div class="gift-price">R$ 57.90</div>
+                    <p class="gift-description">Jogo 4 Xícaras De Vidro Alça Bolinha Conjunto 100ml Mesa Posta PREMIUM</p>
+                    <a href="#" class="buy-btn" onclick="selectGift(7)">Presentear</a>
+                </div>
+            </div>
+            
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="img/jogo-copo-jarra.jpg" alt="Jogo de Toalhas">
+                </div>
+                <div class="gift-info">
+                    <h3>Conjunto de Jarra e Copos</h3>
+                    <div class="gift-price">R$ 59.99</div>
+                    <p class="gift-description">Conjunto de Jarra e 6 Copos de Vidro Transparente - Dumiat (Rozana)</p>
+                    <a href="#" class="buy-btn" onclick="selectGift(8)">Presentear</a>
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="img/kit-utensilios.jpg" alt="Jogo de Toalhas">
+                </div>
+                <div class="gift-info">
+                    <h3>Kit Utensílios de Cozinha</h3>
+                    <div class="gift-price">R$ 64.97</div>
+                    <p class="gift-description">Kit 12 Utensílios De Cozinha Em Silicone E Cabo De Madeira Jogo De Utensílios Resistente ao Calor Antiaderente Premium GAXMARK (Preto)</p>
+                    <a href="#" class="buy-btn" onclick="selectGift(9)">Presentear</a>
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="img/kit-coxa-casal.jpg" alt="Jogo de Toalhas">
+                </div>
+                <div class="gift-info">
+                    <h3>Kit Edredom Casal Queen</h3>
+                    <div class="gift-price">R$ 69.90</div>
+                    <p class="gift-description">Kit Edredom Casal Queen 3 Peças Margarida Cama Box Cor:Rose</p>
+                    <a href="#" class="buy-btn" onclick="selectGift(10)">Presentear</a>
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="img/kit-banheiro.jpg" alt="Jogo de Toalhas">
+                </div>
+                <div class="gift-info">
+                    <h3>Kit Conjunto para Banheiro Bambu</h3>
+                    <div class="gift-price">R$ 76.90</div>
+                    <p class="gift-description">Kit Conjunto para Banheiro Bambu 6 Peças, Preto e Branco (Branco)</p>
+                    <a href="#" class="buy-btn" onclick="selectGift(11)">Presentear</a>
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="img/kit-banheiro2.jpg" alt="Jogo de Toalhas">
+                </div>
+                <div class="gift-info">
+                    <h3>LYOR - Conjunto 3 Peças p/ Banheiro</h3>
+                    <div class="gift-price">R$ 41.90</div>
+                    <p class="gift-description">LYOR - Conjunto 3 Peças para Banheiro de Cerâmica Toulon Branco</p>
+                    <a href="#" class="buy-btn" onclick="selectGift(12)">Presentear</a>
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="img/jogo-banheiro.jpg" alt="Jogo de Toalhas">
+                </div>
+                <div class="gift-info">
+                    <h3>Jogo De Banheiro</h3>
+                    <div class="gift-price">R$ 56.00</div>
+                    <p class="gift-description">Jogo De Banheiro 3 Peças Cronos (Areia)</p>
+                    <a href="#" class="buy-btn" onclick="selectGift(13)">Presentear</a>
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="img/jarra-vidro.jpg" alt="Jogo de Toalhas">
+                </div>
+                <div class="gift-info">
+                    <h3>WOLFF - Jarra de Vidro</h3>
+                    <div class="gift-price">R$ 57.07</div>
+                    <p class="gift-description">WOLFF - Jarra de Vidro Borossilicato com Tampa 1,5L</p>
+                    <a href="#" class="buy-btn" onclick="selectGift(14)">Presentear</a>
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="img/kit-pano-prato.jpg" alt="Jogo de Toalhas">
+                </div>
+                <div class="gift-info">
+                    <h3>Kit Panos de Prato Estampado</h3>
+                    <div class="gift-price">R$ 59.99</div>
+                    <p class="gift-description">Kit 10 Panos de Prato Estampado Gigante 75 x 45 cm Boa Absorção e Limpeza Facilitada com Acabamento em Costura 100% Algodão</p>
+                    <a href="#" class="buy-btn" onclick="selectGift(15)">Presentear</a>
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="img/nordica-branca.jpg" alt="Jogo de Toalhas">
+                </div>
+                <div class="gift-info">
+                    <h3>WOLFF - Garrafa Térmica de Plástico</h3>
+                    <div class="gift-price">R$ 69.00</div>
+                    <p class="gift-description">WOLFF - Garrafa Térmica de Plástico com Cabo de Madeira Nórdica 1L Branca - Mesa Posta - Itens Para Casa - Utensílios de Cozinha - Perfeita Para Café e Chá</p>
+                    <a href="#" class="buy-btn" onclick="selectGift(16)">Presentear</a>
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="img/faqueiro.jpg" alt="Jogo de Toalhas">
+                </div>
+                <div class="gift-info">
+                    <h3>Faqueiro 24 Peças</h3>
+                    <div class="gift-price">R$ 54.90</div>
+                    <p class="gift-description">Faqueiro 24 Peças em Aço Inox Riviera preto com Pote de Plástico Brinox - 6025/712</p>
+                    <a href="#" class="buy-btn" onclick="selectGift(17)">Presentear</a>
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="img/conj-pratos.jpg" alt="Jogo de Toalhas">
+                </div>
+                <div class="gift-info">
+                    <h3>Kit Prato Raso</h3>
+                    <div class="gift-price">R$ 99.90</div>
+                    <p class="gift-description">Kit Prato Raso Tramontina Leonora em Porcelana 25 cm 06 Peças</p>
+                    <a href="#" class="buy-btn" onclick="selectGift(18)">Presentear</a>
+                </div>
+            </div>
+
+        </div>
+
+        
+
+        <div class="payment-methods">
+            <h3>Formas de Pagamento</h3>
+            <div class="payment-options">
+                <div class="pix-payment">
+                    <h4>PIX</h4>
+                    <div class="qr-code">
+                        <img src="img/qrcode-pix.png" alt="QR Code PIX">
+                        <p>Escaneie o QR Code ou use a chave abaixo:</p>
+                        <div class="pix-key">
+                            <span>2f4770c6-9679-4526-851c-9081395a64a9</span>
+                            <h5>Nome: Yasmin Nogueira Rodrigues</h5>
+                            <h5>Banco: Nubank</h5>
+                            <button onclick="copyPixKey()">Copiar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="link-payment">
+                    <h4>Link de Pagamento</h4>
+                    <a href="https://payment-link-v3.ton.com.br/pl_v39Rm2OVjWMXznFndSbeXgYarzE4QKGy" target="_blank">Clique aqui para pagar online</a>
+                    <p>Você será redirecionado para uma plataforma segura de pagamento.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="payment-tutorial">
+            <h3>Tutorial de Pagamento</h3>
+            <div class="tutorial-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Escolha seu presente</h4>
+                        <p>Selecione na lista acima o presente que deseja dar ao casal.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Selecione a forma de pagamento</h4>
+                        <p>Escolha entre PIX (mais rápido) ou Link de Pagamento (cartão de crédito).</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Realize o pagamento</h4>
+                        <p>Siga as instruções para completar sua contribuição.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Confirmação automática</h4>
+                        <p>O casal será notificado automaticamente sobre seu presente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <footer>
+            <p>Obrigado por fazer parte do nosso chá de panela!</p>
+            <p>Thiago & Yasmin</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

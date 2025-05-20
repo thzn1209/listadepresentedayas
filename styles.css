@@ -1,0 +1,884 @@
+/* ==================== */
+/* FUNDO DINÂMICO FUTURISTA ROSA */
+/* ==================== */
+body {
+    background: linear-gradient(135deg, #1a0a1a, #3d1b3d, #2a0e2a);
+    color: #252323;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Efeito de partículas futuristas rosa */
+.futuristic-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Utensílios de cozinha futuristas em rosa */
+.kitchen-icon {
+    position: absolute;
+    opacity: 0.15;
+    filter: drop-shadow(0 0 8px rgba(255, 105, 180, 0.5));
+    animation: floatIcon 15s infinite linear;
+    z-index: -1;
+}
+
+/* Ícones SVG dos utensílios em rosa */
+.kitchen-icon.spoon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff69b4"><path d="M15 5.6V4c0-1.1-.9-2-2-2h-2c-1.1 0-2 .9-2 2v1.6c-1.2.7-2 2-2 3.4v9.5c0 .8.7 1.5 1.5 1.5h5c.8 0 1.5-.7 1.5-1.5V9c0-1.4-.8-2.7-2-3.4z"/></svg>');
+}
+
+.kitchen-icon.pan {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff69b4"><path d="M19 9c0-1.3-.8-2.4-2-2.8V4h-2v2h-2V4h-2v2h-2V4H7v2.2c-1.2.4-2 1.5-2 2.8v9c0 1.7 1.3 3 3 3h10c1.7 0 3-1.3 3-3V9z"/></svg>');
+}
+
+.kitchen-icon.blender {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff69b4"><path d="M16 13h-3V4h1c.6 0 1-.4 1-1V2H9v1c0 .6.4 1 1 1h1v9H8c-1.7 0-3 1.3-3 3v6c0 1.7 1.3 3 3 3h8c1.7 0 3-1.3 3-3v-6c0-1.7-1.3-3-3-3z"/></svg>');
+}
+
+.kitchen-icon.cup {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff69b4"><path d="M18 7V5c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v2H5v2h1v9c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V9h1V7h-2z"/></svg>');
+}
+
+.kitchen-icon.grill {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff69b4"><path d="M19 7h-1V6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v1H5c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm0 10H5V9h14v8z"/></svg>');
+}
+
+/* Efeitos de brilho futurista rosa */
+.glow-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,105,180,0.6) 0%, rgba(255,105,180,0) 70%);
+    filter: blur(8px);
+    animation: pulse 4s infinite alternate;
+    z-index: -1;
+}
+
+/* Linhas de conexão futuristas rosa */
+.connection-line {
+    position: absolute;
+    background: linear-gradient(90deg, rgba(255,105,180,0) 0%, rgba(255,105,180,0.4) 50%, rgba(255,105,180,0) 100%);
+    height: 1px;
+    transform-origin: left center;
+    animation: scan 8s infinite linear;
+    z-index: -1;
+}
+
+/* Bolhas rosas flutuantes */
+.bubble {
+    position: fixed;
+    background-color: rgba(255, 182, 193, 0.15);
+    border-radius: 50%;
+    z-index: -1;
+    animation: rise 10s infinite ease-in;
+    filter: blur(2px);
+}
+
+/* Animações atualizadas */
+@keyframes floatIcon {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        transform: translate(100px, 50px) rotate(10deg);
+        opacity: 0.1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(1.3);
+        opacity: 0.4;
+    }
+}
+
+@keyframes scan {
+    0% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: scaleX(1);
+        opacity: 0;
+    }
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.2);
+        opacity: 0;
+    }
+}
+/* Restante do CSS permanece igual... */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ==================== */
+/* CABEÇALHO */
+/* ==================== */
+header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.couple-photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ff85a2;
+    box-shadow: 0 4px 15px rgba(255, 133, 162, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.couple-photo img:hover {
+    transform: scale(1.03);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: #d23669;
+    margin-top: 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0.8rem 0 0.3rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+/* ==================== */
+/* CONTROLES */
+/* ==================== */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.search-box {
+    display: flex;
+    flex-grow: 1;
+    max-width: 500px;
+}
+
+.search-box input {
+    flex-grow: 1;
+    padding: 0.625rem 0.9375rem;
+    border: 2px solid #ffb3c6;
+    border-radius: 25px 0 0 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #d23669;
+}
+
+.search-box button {
+    padding: 0.625rem 1.25rem;
+    background-color: #ff85a2;
+    color: white;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #d23669;
+    transform: translateY(-1px);
+}
+
+.sort-options {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.sort-options label {
+    font-weight: 600;
+    color: #d23669;
+}
+
+.sort-options select {
+    padding: 0.625rem;
+    border: 2px solid #ffb3c6;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sort-options select:focus {
+    border-color: #d23669;
+    outline: none;
+}
+
+/* ==================== */
+/* LISTA DE PRESENTES */
+/* ==================== */
+.gifts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.gift-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(255, 133, 162, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.gift-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(255, 133, 162, 0.3);
+}
+
+.gift-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.gift-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gift-card:hover .gift-image img {
+    transform: scale(1.05);
+}
+
+.gift-info {
+    padding: 1.25rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.gift-info h3 {
+    margin: 0 0 0.625rem;
+    font-size: 1.4rem;
+}
+
+.gift-price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ff85a2;
+    margin-bottom: 0.9375rem;
+}
+
+.gift-description {
+    margin-bottom: 1rem;
+    color: #666;
+    flex-grow: 1;
+}
+
+.buy-btn {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    background-color: #ff85a2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s;
+    align-self: flex-start;
+}
+
+.buy-btn:hover {
+    background-color: #d23669;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 10px rgba(210, 54, 105, 0.3);
+}
+
+/* ==================== */
+/* SEÇÃO DE PAGAMENTO */
+/* ==================== */
+.payment-methods {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 15px rgba(255, 133, 162, 0.1);
+}
+
+.payment-methods h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.pix-payment, .link-payment {
+    flex: 1;
+    min-width: 300px;
+    padding: 1.5rem;
+    background-color: #fff5f7;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.pix-payment:hover, .link-payment:hover {
+    transform: translateY(-3px);
+}
+
+.pix-payment h4, .link-payment h4 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.qr-code {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.qr-code img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 0.625rem;
+    border: 1px solid #ffb3c6;
+    padding: 0.625rem;
+    background-color: white;
+    border-radius: 8px;
+}
+
+/* ==================== */
+/* BOTÃO COPIAR CHAVE PIX - ATUALIZADO */
+/* ==================== */
+.pix-key-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    margin: 1rem 0;
+}
+
+.pix-key-input {
+    flex-grow: 1;
+    padding: 0.625rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    text-align: center;
+    background: white;
+    margin-bottom: 0.5rem;
+}
+
+.pix-copy-btn {
+    position: relative;
+    padding: 0.8rem 1.8rem;
+    background: linear-gradient(135deg, #ff85a2, #d23669);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    box-shadow: 0 4px 12px rgba(210, 54, 105, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    z-index: 1;
+    min-width: 200px;
+    margin-top: 1rem;
+}
+
+.pix-copy-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #d23669, #ff85a2);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.pix-copy-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(210, 54, 105, 0.4);
+}
+
+.pix-copy-btn:hover::before {
+    opacity: 1;
+}
+
+.pix-copy-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(210, 54, 105, 0.3);
+}
+
+.pix-copy-btn i {
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.pix-copy-btn.copied {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    animation: pulse-glow 0.6s ease;
+}
+
+.pix-copy-btn.copied i {
+    transform: scale(1.3);
+}
+
+@keyframes pulse-glow {
+    0% { 
+        transform: translateY(-3px) scale(1);
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+    }
+    70% { 
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+    }
+    100% { 
+        transform: translateY(-3px) scale(1);
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+    }
+}
+
+.pix-tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #d23669;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+
+.pix-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #d23669 transparent transparent transparent;
+}
+
+.pix-copy-btn:hover .pix-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ==================== */
+/* LINK DE PAGAMENTO */
+/* ==================== */
+.link-payment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-payment a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #ff85a2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.link-payment a:hover {
+    background-color: #d23669;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 10px rgba(210, 54, 105, 0.3);
+}
+
+/* ==================== */
+/* MODAL */
+/* ==================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1.25rem;
+    overflow-y: auto;
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    animation: modalFadeIn 0.3s ease-out;
+    border: 1px solid #ffb3c6;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.pix-payment-info {
+    background-color: #fff5f7;
+    padding: 1.25rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    text-align: center;
+    border: 1px solid #ffd6e0;
+}
+
+#qrcode {
+    margin: 0 auto;
+    padding: 0.625rem;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 100%;
+    display: inline-block;
+}
+
+.modal-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    justify-content: center;
+    margin: 1.25rem 0;
+}
+
+.modal-buttons button {
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    flex: 1;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.modal-buttons button i {
+    font-size: 1.1rem;
+}
+
+.pix-btn {
+    background-color: #32CD32;
+    color: white;
+}
+
+.pix-btn:hover {
+    background-color: #2bb82b;
+    transform: translateY(-2px);
+}
+
+.link-btn {
+    background-color: #4169E1;
+    color: white;
+}
+
+.link-btn:hover {
+    background-color: #3a5fcc;
+    transform: translateY(-2px);
+}
+
+.cancel-btn {
+    padding: 0.8rem 1.8rem;
+    background: linear-gradient(135deg, #ff85a2, #e91e63);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    box-shadow: 0 3px 10px rgba(216, 27, 96, 0.3);
+    position: relative;
+    overflow: hidden;
+    min-width: 180px;
+    margin-top: 1.5rem;
+    border: 2px solid transparent;
+    width: 100%;
+}
+
+.cancel-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+              rgba(255, 255, 255, 0.2), 
+              rgba(255, 255, 255, 0.1));
+    transform: translateX(-100%) skewX(-15deg);
+    transition: transform 0.4s ease;
+}
+
+.cancel-btn:hover {
+    background: linear-gradient(135deg, #e91e63, #ff85a2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(216, 27, 96, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.cancel-btn:hover::after {
+    transform: translateX(100%) skewX(-15deg);
+}
+
+.cancel-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(216, 27, 96, 0.3);
+}
+
+.cancel-btn i {
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+.cancel-btn:hover i {
+    transform: rotate(90deg);
+}
+
+.payment-instructions {
+    text-align: left;
+    margin-top: 1.5rem;
+    color: #d23669;
+}
+
+.payment-instructions ol {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0;
+}
+
+.payment-instructions li {
+    margin-bottom: 0.5rem;
+}
+
+/* ==================== */
+/* RODAPÉ */
+/* ==================== */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #d23669;
+    font-size: 1.1rem;
+}
+
+/* ==================== */
+/* RESPONSIVIDADE */
+/* ==================== */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-box {
+        max-width: 100%;
+    }
+    
+    .payment-options {
+        flex-direction: column;
+    }
+    
+    .modal-buttons {
+        flex-direction: column;
+    }
+    
+    .modal-buttons button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 1rem;
+    }
+    
+    .modal-buttons button {
+        padding: 0.625rem;
+        font-size: 0.875rem;
+    }
+    
+    .pix-payment-info {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .gifts-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==================== */
+/* EFEITOS DE CONFIRMAÇÃO */
+/* ==================== */
+.pix-confirmation {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    background: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.pix-confirmation i {
+    font-size: 1.2rem;
+}
+
+
+
+/* ==================== */
+/* TUTORIAL DE PAGAMENTO */
+/* ==================== */
+.payment-tutorial {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 15px rgba(255, 133, 162, 0.1);
+}
+
+.payment-tutorial h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #d23669;
+}
+
+.tutorial-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.step-number {
+    background-color: #ff85a2;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.step-content h4 {
+    margin: 0 0 0.5rem;
+    color: #d23669;
+    font-size: 1.1rem;
+}
+
+.step-content p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
