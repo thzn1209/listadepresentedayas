@@ -164,7 +164,7 @@ function payWithPix(giftId) {
                         <li>Confirme o valor e finalize</li>
                     </ol>
                     <p class="gift-reference">Referência: ${escapeHtml(gift.name)}</p>
-                    <p>Nome Beneficiário: Yasmin Nogueira Rodrigues/p>
+                    <p>Nome Beneficiário: Yasmin Nogueira Rodrigues</p>
                     <p>Banco: Nubank</p>
                 </div>
             </div>
