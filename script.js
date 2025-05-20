@@ -143,7 +143,7 @@ function payWithPix(giftId) {
                 <div id="qrcode"></div>
                 
                 <div class="pix-key-container">
-                    <p>Ou utilize a chave PIX:</p>
+    
                     
                     <p>Ou utilize a chave PIX:</p>
                     <input type="text" id="pixKeyInput" class="pix-key-input" value="${escapeHtml(gift.pixKey)}" readonly>
