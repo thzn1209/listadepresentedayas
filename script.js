@@ -17,7 +17,7 @@ const gifts = Array.from(document.querySelectorAll('.gift-card')).map((card, ind
         9: "https://payment-link-v3.ton.com.br/pl_MnN20VeXA36zqM2fVh95zqbZxOdYEwo9", // Kit Utensílios de Cozinha
         10: "https://payment-link-v3.ton.com.br/pl_Dnl3516bpgWoLwlCDU9vGKB02Xzk9eRm", // Kit Edredom Casal Queen
         11: "https://payment-link-v3.ton.com.br/pl_KoGM58Pvm9y4paBFEmH8l7RbrwkXZazq", // Kit Banheiro Bambu
-        12: "https://payment-link-v3.ton.com.br/pl_a43pzWej6JLEe2ktj4fXOnby8vVPGXKq", // Conjunto 3 Peças Banheiro
+        12: "https://payment-link-v3.ton.com.br/pl_K1VW5ZQaBmw6E3ymT4SaXqpgo9ldGNY0", // Conjunto 3 Peças Banheiro
         13: "https://payment-link-v3.ton.com.br/pl_zo7m0xQbvg9NWQgIouevdXr2RGjE54Lw", // Jogo De Banheiro
         14: "https://payment-link-v3.ton.com.br/pl_zo7m0xQbvg9NWQgIouevdXr2RGjE54Lw", // Jarra de Vidro
         15: "https://payment-link-v3.ton.com.br/pl_Vvm2ENx49oLgqlhQ7Fq06KROAQ8wkjY7", // Kit Panos de Prato
