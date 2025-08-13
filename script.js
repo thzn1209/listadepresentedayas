@@ -6,24 +6,22 @@ const gifts = Array.from(document.querySelectorAll('.gift-card')).map((card, ind
     
     // Links de pagamento específicos para cada presente
     const paymentLinks = {
-        1: "https://payment-link-v3.ton.com.br/pl_PRGV8BYbxvEDJX4cMtYmpzg5ylMwjOaq", // Sanduicheira
-        2: "https://payment-link-v3.ton.com.br/pl_KEyGpXqNR6za9xrHOHQAY8ZVO7WlQ40b", // Liquidificador
-        3: "https://payment-link-v3.ton.com.br/pl_DGPEark6lLXeK0yceslMqvyxNMmboY17", // Batedeira Mondial
-        4: "https://payment-link-v3.ton.com.br/pl_ROg91dl7a2LNwzYfJBCrorQkPZ863KbB", // Cafeteira Elétrica
-        5: "https://payment-link-v3.ton.com.br/pl_nzkQG3NlyvV1bQVTBJiEv4B09RrLdmxZ", // Garrafa Elétrica
-        6: "https://payment-link-v3.ton.com.br/pl_ynAKlW8ENZ7JVq6XSGH2Q9LzdPDRM4rg", // Ferro de Engomar
-        7: "https://payment-link-v3.ton.com.br/pl_Dgox9yWR5q80k5bCWSLL34jwp6MAvnXk", // Jogo de 4 Xícaras
-        8: "https://payment-link-v3.ton.com.br/pl_VXB2L6lNPgE4Y88sN4CgYAx87qv01nyj", // Conjunto jarra e copos
-        9: "https://payment-link-v3.ton.com.br/pl_MnN20VeXA36zqM2fVh95zqbZxOdYEwo9", // Kit Utensílios de Cozinha
-        10: "https://payment-link-v3.ton.com.br/pl_Dnl3516bpgWoLwlCDU9vGKB02Xzk9eRm", // Kit Edredom Casal Queen
-        11: "https://payment-link-v3.ton.com.br/pl_KoGM58Pvm9y4paBFEmH8l7RbrwkXZazq", // Kit Banheiro Bambu
-        12: "https://payment-link-v3.ton.com.br/pl_a43pzWej6JLEe2ktj4fXOnby8vVPGXKq", // Conjunto 3 Peças Banheiro
-        13: "https://payment-link-v3.ton.com.br/pl_zo7m0xQbvg9NWQgIouevdXr2RGjE54Lw", // Jogo De Banheiro
-        14: "https://payment-link-v3.ton.com.br/pl_zo7m0xQbvg9NWQgIouevdXr2RGjE54Lw", // Jarra de Vidro
-        15: "https://payment-link-v3.ton.com.br/pl_Vvm2ENx49oLgqlhQ7Fq06KROAQ8wkjY7", // Kit Panos de Prato
-        16: "https://payment-link-v3.ton.com.br/pl_nd9LVXJl7GkovoPwFgTXNY6xjw4DqOa0", // Garrafa Térmica
-        17: "https://payment-link-v3.ton.com.br/pl_eDGkm2r8YVdPb9uxntzyALX1Nw4nQ90K", // Faqueiro 24 Peças
-        18: "https://payment-link-v3.ton.com.br/pl_kyna4b8zqJE0N8rH2sKQVQ1PeA7W3XZr"  // Kit Prato Raso
+        1: "https://payment-link-v3.ton.com.br/pl_9yBEGAD143gQno3hBBTxMNqW7p8oKdPV", // Sanduicheira
+        2: "https://payment-link-v3.ton.com.br/pl_y6MwZKRQqd7GN6AqtrT9WL53zbPO2mr9", // Liquidificador
+        3: "https://payment-link-v3.ton.com.br/pl_yE6NWY7KPeX0r0YuKcAOpLgkqBQG1bR3", // Batedeira Mondial
+        4: "https://payment-link-v3.ton.com.br/pl_7obv8nPYDBqr5zjTkHqR5OZmVQxNME3k", // Cafeteira Elétrica
+        5: "https://payment-link-v3.ton.com.br/pl_Bqnpe4KWDrLZANQc37HAOa7G8yEAko1Q", // Garrafa Elétrica
+        6: "https://payment-link-v3.ton.com.br/pl_0P2VraXNx41dGmRfJ6HVpOYRvwoeB7ML", // Ferro de Engomar
+        7: "https://payment-link-v3.ton.com.br/pl_gJRAl0oqL5e9jvvcnZiEj63bXkwQM7Dn", // Jogo de 4 Xícaras
+        8: "https://payment-link-v3.ton.com.br/pl_Pgxj0QNao8bz79VuZaUYR3en96BZLVMy", // Conjunto jarra e copos
+        9: "https://payment-link-v3.ton.com.br/pl_mgDjx9zNrEqRpD1uPtD34J2vGW7YZQ0y", // Kit Utensílios de Cozinha
+        10: "https://payment-link-v3.ton.com.br/pl_D5Jq8l40XdPnKRPiZ7UG8y17LQVvMBO6", // Kit Edredom Casal Queen
+        11: "https://payment-link-v3.ton.com.br/pl_lPDx8NEw9kbgWAADUvhGWzveX2QMqG1Z", // Kit Banheiro Bambu
+        12: "https://payment-link-v3.ton.com.br/pl_A5dRe4wv67px6ZjuJqF1xK3ZayqOzQor", // Conjunto 3 Peças Banheiro
+        13: "https://payment-link-v3.ton.com.br/pl_bAjEN18n7L59l8nMuOt1p0Zxvez24kqw", // Jogo De Banheiro
+        14: "https://payment-link-v3.ton.com.br/pl_aX0bqBYzWrApKNyTZoUdMvmxonJ3Q1wj", // Jarra de Vidro
+        15: "https://payment-link-v3.ton.com.br/pl_Y4Rz8N6ekP7O9NJXh1fq901loXZBGrJQ", // Kit Panos de Prato
+       
     };
 
     return {
@@ -34,7 +32,7 @@ const gifts = Array.from(document.querySelectorAll('.gift-card')).map((card, ind
         description: card.querySelector('.gift-description').textContent,
         element: card,
         pixKey: "2f4770c6-9679-4526-851c-9081395a64a9",
-        paymentLink: paymentLinks[index + 1] || "https://pag.ae/7YfV5vJ4L"
+        paymentLink: paymentLinks[index + 1] || "https://payment-link-v3.ton.com.br/pl"
     };
 });
 
