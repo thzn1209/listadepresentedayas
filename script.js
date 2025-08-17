@@ -6,21 +6,22 @@ const gifts = Array.from(document.querySelectorAll('.gift-card')).map((card, ind
     
     // Links de pagamento específicos para cada presente
     const paymentLinks = {
-        1: "https://payment-link-v3.ton.com.br/pl_9yBEGAD143gQno3hBBTxMNqW7p8oKdPV", // Sanduicheira
-        2: "https://payment-link-v3.ton.com.br/pl_y6MwZKRQqd7GN6AqtrT9WL53zbPO2mr9", // Liquidificador
-        3: "https://payment-link-v3.ton.com.br/pl_yE6NWY7KPeX0r0YuKcAOpLgkqBQG1bR3", // Batedeira Mondial
-        4: "https://payment-link-v3.ton.com.br/pl_7obv8nPYDBqr5zjTkHqR5OZmVQxNME3k", // Cafeteira Elétrica
-        5: "https://payment-link-v3.ton.com.br/pl_Bqnpe4KWDrLZANQc37HAOa7G8yEAko1Q", // Garrafa Elétrica
-        6: "https://payment-link-v3.ton.com.br/pl_0P2VraXNx41dGmRfJ6HVpOYRvwoeB7ML", // Ferro de Engomar
-        7: "https://payment-link-v3.ton.com.br/pl_gJRAl0oqL5e9jvvcnZiEj63bXkwQM7Dn", // Jogo de 4 Xícaras
-        8: "https://payment-link-v3.ton.com.br/pl_Pgxj0QNao8bz79VuZaUYR3en96BZLVMy", // Conjunto jarra e copos
-        9: "https://payment-link-v3.ton.com.br/pl_mgDjx9zNrEqRpD1uPtD34J2vGW7YZQ0y", // Kit Utensílios de Cozinha
-        10: "https://payment-link-v3.ton.com.br/pl_D5Jq8l40XdPnKRPiZ7UG8y17LQVvMBO6", // Kit Edredom Casal Queen
-        11: "https://payment-link-v3.ton.com.br/pl_lPDx8NEw9kbgWAADUvhGWzveX2QMqG1Z", // Kit Banheiro Bambu
-        12: "https://payment-link-v3.ton.com.br/pl_A5dRe4wv67px6ZjuJqF1xK3ZayqOzQor", // Conjunto 3 Peças Banheiro
-        13: "https://payment-link-v3.ton.com.br/pl_bAjEN18n7L59l8nMuOt1p0Zxvez24kqw", // Jogo De Banheiro
-        14: "https://payment-link-v3.ton.com.br/pl_aX0bqBYzWrApKNyTZoUdMvmxonJ3Q1wj", // Jarra de Vidro
-        15: "https://payment-link-v3.ton.com.br/pl_Y4Rz8N6ekP7O9NJXh1fq901loXZBGrJQ", // Kit Panos de Prato
+        1: "https://payment-link-v3.ton.com.br/pl_9yBEGAD143gQno3hBBTxMNqW7p8oKdPV", // Vale experiência (R$ 150,00)
+2: "https://payment-link-v3.ton.com.br/pl_y6MwZKRQqd7GN6AqtrT9WL53zbPO2mr9", // Vaquinha (R$ 250,00)
+3: "https://payment-link-v3.ton.com.br/pl_yE6NWY7KPeX0r0YuKcAOpLgkqBQG1bR3", // Ajuda vinho (R$ 270,00)
+4: "https://payment-link-v3.ton.com.br/pl_0P2VraXNx41dGmRfJ6HVpOYRvwoeB7ML", // Ajuda lua de mel (R$ 312,14)
+5: "https://payment-link-v3.ton.com.br/pl_Y4Rz8N6ekP7O9NJXh1fq901loXZBGrJQ", // Botijão (R$ 340,00)
+6: "https://payment-link-v3.ton.com.br/pl_px9aezZV7lXDZzaHgS18DnQB08k1bGJY", // Mais estiloso (R$ 360,00)
+7: "https://payment-link-v3.ton.com.br/pl_bAjEN18n7L59l8nMuOt1p0Zxvez24kqw", // Cafe Premium (R$ 400,00)
+8: "https://payment-link-v3.ton.com.br/pl_7obv8nPYDBqr5zjTkHqR5OZmVQxNME3k", // Cafeteira Premium (R$ 468,90)
+9: "https://payment-link-v3.ton.com.br/pl_Bqnpe4KWDrLZANQc37HAOa7G8yEAko1Q", // Mesa dos sonhos (R$ 470,00)
+10: "https://payment-link-v3.ton.com.br/pl_gJRAl0oqL5e9jvvcnZiEj63bXkwQM7Dn", // Melhor amigo noivos (R$ 480,00)
+11: "https://payment-link-v3.ton.com.br/pl_Pgxj0QNao8bz79VuZaUYR3en96BZLVMy", // Vauqinha tapete (R$ 520,00)
+12: "https://payment-link-v3.ton.com.br/pl_mgDjx9zNrEqRpD1uPtD34J2vGW7YZQ0y", // Pedreiro (R$ 600,00)
+13: "https://payment-link-v3.ton.com.br/pl_lPDx8NEw9kbgWAADUvhGWzveX2QMqG1Z", // Sofá (R$ 700,00)
+14: "https://payment-link-v3.ton.com.br/pl_D5Jq8l40XdPnKRPiZ7UG8y17LQVvMBO6", // Presente surpresa (R$ 800,00)
+15: "https://payment-link-v3.ton.com.br/pl_A5dRe4wv67px6ZjuJqF1xK3ZayqOzQor", // Pitaco (R$ 2.000,00)
+
        
     };
 
@@ -36,7 +37,7 @@ const gifts = Array.from(document.querySelectorAll('.gift-card')).map((card, ind
     };
 });
 
-// Restante do código permanece igual...
+
 // Configurações do tema
 const themeConfig = {
     colors: {
